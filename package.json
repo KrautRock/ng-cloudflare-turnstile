@@ -1,5 +1,5 @@
 {
-  "name": "ng-cloudflare-turnstile",
+  "name": "@pangz/ng-cloudflare-turnstile",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,10 +7,22 @@
     "start_demo": "ng serve ng-cloudflare-turnstile-demo",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "prepare": "ng build ng-cloudflare-turnstile"
+  },
+  "files": ["dist/ng-cloudflare-turnstile/**"],
+  "types": "./dist/ng-cloudflare-turnstile/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/ng-cloudflare-turnstile/index.d.ts",
+      "default": "./dist/ng-cloudflare-turnstile/fesm2022/pangz-ng-cloudflare-turnstile.mjs"
+    }
   },
   "private": true,
   "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "peerDependencies": {
     "@angular/animations": "^18.1.0",
     "@angular/common": "^18.1.0",
     "@angular/compiler": "^18.1.0",
@@ -19,9 +31,7 @@
     "@angular/platform-browser": "^18.1.0",
     "@angular/platform-browser-dynamic": "^18.1.0",
     "@angular/router": "^18.1.0",
-    "@pangz/ng-cloudflare-turnstile": "^0.3.0",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
@@ -36,6 +46,16 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^18.2.0",
-    "typescript": "~5.5.2"
+    "typescript": "~5.5.2",
+    "@angular/animations": "^18.1.0",
+    "@angular/common": "^18.1.0",
+    "@angular/compiler": "^18.1.0",
+    "@angular/core": "^18.1.0",
+    "@angular/forms": "^18.1.0",
+    "@angular/platform-browser": "^18.1.0",
+    "@angular/platform-browser-dynamic": "^18.1.0",
+    "@angular/router": "^18.1.0",
+    "rxjs": "~7.8.0",
+    "zone.js": "~0.14.3"
   }
 }
